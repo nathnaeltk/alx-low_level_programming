@@ -19,4 +19,4 @@
 | [11-print_to_98.c](11-print_to_98.c) | Write a function that prints all natural numbers from n to 98, followed by a new line. |
 
 ## Author
-[@LinTamara](@LinTamara)
+[@nathnaeltk](@nathnaeltk)
