@@ -1,24 +1,20 @@
-julien@ubuntu:~/0x06$ cat 5-main.c
-#include "main.h"
-#include <stdio.h>
-
+#include "holberton.h"
 /**
- * main - check the code
+ * *string_toupper - changes all lowercase letters of a string to upper.
  *
- * Return: Always 0.
+ * @str: string to return.
+ * Return: string.
  */
-int main(void)
+char *string_toupper(char *str)
 {
-    char str[] = "Look up!\n";
-    char *ptr;
+	int i;
 
-    ptr = string_toupper(str);
-    printf("%s", ptr);
-    printf("%s", str);
-    return (0);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] >= 97 && str[i] <= 122)
+		{
+			str[i] = str[i] - 32;
+		}
+	}
+	return (str);
 }
-julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-string_toupper.c -o 5-string_toupper
-julien@ubuntu:~/0x06$ ./5-string_toupper 
-LOOK UP!
-LOOK UP!
-julien@ubuntu:~/0x06$

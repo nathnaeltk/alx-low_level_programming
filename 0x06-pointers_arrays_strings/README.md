@@ -1,1 +1,2 @@
-# alx-low_level_programming
+# c gives me joy
+**More about pointers and strings
