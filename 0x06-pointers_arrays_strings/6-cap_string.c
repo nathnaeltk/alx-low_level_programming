@@ -1,43 +1,26 @@
-#include "holberton.h"
+julien@ubuntu:~/0x06$ cat 6-main.c
+#include "main.h"
+#include <stdio.h>
 
 /**
- * *cap_string - capitalize words
- * @str: pointer
- * Return: capitalzied string
-*/
-
-char *cap_string(char *str)
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-char sep[] = ",\t;\n; .!?\"(){}";
-int flag, i, ii;
+    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+    char *ptr;
 
-for (i = 0; str[i] != '\0'; i++)
-{
-	flag = 0;
-
-	if (i == 0)
-	{
-		flag = 1;
-	}
-	else
-	{
-		for (ii = 0; sep[ii] != '\0'; ii++)
-		{
-			if (str[i - 1] == sep[ii])
-			{
-				flag = 1;
-				break;
-			}
-		}
-	}
-
-	if (flag == 1)
-	{
-		if (str[i] <= 'z' && str[i] >= 'a')
-		{
-			str[i] -= ('a' - 'A');
-		}
-	}
+    ptr = cap_string(str);
+    printf("%s", ptr);
+    printf("%s", str);
+    return (0);
 }
-return (str);
-}
+julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 6-main.c 6-cap_string.c -o 6-cap
+julien@ubuntu:~/0x06$ ./6-cap 
+Expect The Best. Prepare For The Worst. Capitalize On What Comes.
+Hello World! Hello-world 0123456hello World Hello World.Hello World
+Expect The Best. Prepare For The Worst. Capitalize On What Comes.
+Hello World! Hello-world 0123456hello World Hello World.Hello World
+julien@ubuntu:~/0x06$ 

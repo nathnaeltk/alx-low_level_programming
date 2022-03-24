@@ -1,26 +1,25 @@
-#include "holberton.h"
-/**
- * _strcmp - compares two strings
- * @s1: string 1
- * @s2: string 2
- * Return: 0 if matching, and ns1 - ns2 if not matching
-*/
-
-int _strcmp(char *s1, char *s2)
-{
-int i;
+julien@ubuntu:~/0x06$ cat 3-main.c
+#include "main.h"
+#include <stdio.h>
 
 /**
- * We have reached the end of S1 OR we have reached the end of S2
- * 
-*/
-
-for (i = 0; s1[i] != '\0' || s2[i] != '\0'; i++)
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	if (s1[i] != s2[i])
-	{
-		return (s1[i] - s2[i]);
-	}
+    char s1[] = "Hello";
+    char s2[] = "World!";
+
+    printf("%d\n", _strcmp(s1, s2));
+    printf("%d\n", _strcmp(s2, s1));
+    printf("%d\n", _strcmp(s1, s1));
+    return (0);
 }
-return (0);
-}
+julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-strcmp.c -o 3-strcmp
+julien@ubuntu:~/0x06$ ./3-strcmp 
+-15
+15
+0
+julien@ubuntu:~/0x06$ 

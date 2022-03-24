@@ -1,1 +1,1 @@
-# Learning Pointers, arrays and strings in C
+# alx-low_level_programming

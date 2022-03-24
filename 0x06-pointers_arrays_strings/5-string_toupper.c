@@ -1,17 +1,24 @@
-#include "holberton.h"
-/**
- * *string_toupper - capitalize a string
- * @str: pointer
- * Return: capitalzied string
-*/
+julien@ubuntu:~/0x06$ cat 5-main.c
+#include "main.h"
+#include <stdio.h>
 
-char *string_toupper(char *str)
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-int i;
-for (i = 0; str[i] != '\0'; i++)
-{
-	if (str[i] <= 'z' && str[i] >= 'a')
-		str[i] -= 32;
+    char str[] = "Look up!\n";
+    char *ptr;
+
+    ptr = string_toupper(str);
+    printf("%s", ptr);
+    printf("%s", str);
+    return (0);
 }
-return (str);
-}
+julien@ubuntu:~/0x06$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 5-main.c 5-string_toupper.c -o 5-string_toupper
+julien@ubuntu:~/0x06$ ./5-string_toupper 
+LOOK UP!
+LOOK UP!
+julien@ubuntu:~/0x06$
