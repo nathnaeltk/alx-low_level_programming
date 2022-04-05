@@ -1,26 +1,18 @@
 #include "main.h"
-
 /**
-* _strchr - function that locates a character in a string.
-*@c: caracter a buscar en la matriz.
-*:
-*@s: cadena que va a escanear
-* Return: 0.
-*/
-
+ * _strchr - locates a character in a string,
+ * @s: string.
+ * @c: character.
+ * Return: the pointer to the first occurrence of the character c.
+ */
 char *_strchr(char *s, char c)
 {
-	int a;
+	unsigned int i = 0;
 
-	for (a = 0; s[a] != '\0' ; a++)
-	{
-		if (s[a] == c)
-
-			return (s + a);
-	}
-	if (s[a] == c)
-	{
-		return (s + a);
-	}
+	for (; *(s + i) != '\0'; i++)
+		if (*(s + i) == c)
+			return (s + i);
+	if (*(s + i) == c)
+		return (s + i);
 	return ('\0');
 }
