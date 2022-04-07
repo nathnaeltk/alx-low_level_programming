@@ -31,13 +31,12 @@ void *m;
 
 if (size == 0 || nmemb == 0)
 	return (NULL);
-
-m = malloc(nmemb * size);
+m = malloc(sizeof(int) * nmemb);
 
 if (m == 0)
 	return (NULL);
 
-_memset(m, 0, nmemb * size);
+_memset(m, 0, nmemb * sizeof(int));
 
 return (m);
 }
