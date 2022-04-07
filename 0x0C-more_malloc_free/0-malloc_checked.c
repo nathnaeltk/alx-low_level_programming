@@ -1,30 +1,26 @@
-/**
- * @file 0-malloc_checked.c
- * @author nate
- * @brief - function that allocates memory using malloc.
- * @version 0.1
- * @date 2022-04-07
- * 
- * @copyright Copyright (c) 2022
- * 
+/*
+ * File: 0-malloc_checked.c
+ * Author: anthnaeltk
  */
+#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
- * *malloc_checked - allocates memory using malloc
- * @b: number of bytes to allocate
- *
- * Return: a pointer to the allocated memory
+ * malloc_checked - allocates memory using malloc.
+ * @b: size of memory space for byte allocation.
+ * Description: as above.
+ * Return: pointer to void.
  */
 void *malloc_checked(unsigned int b)
 {
 	void *ptr;
-
+	/**
+	 * @ptr: ptr to be returned.
+	 */
 	ptr = malloc(b);
-
 	if (ptr == NULL)
+	{
 		exit(98);
-
+	}
 	return (ptr);
 }
